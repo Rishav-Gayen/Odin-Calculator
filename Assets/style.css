@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #2c3e50, #3498db);
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    width: 320px;
+}
+
+.display {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+    min-height: 80px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #fff;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.operator {
+    background: rgba(52, 152, 219, 0.3);
+}
+
+.equals {
+    background: rgba(46, 204, 113, 0.3);
+}
+
+.clear, .delete {
+    background: rgba(231, 76, 60, 0.3);
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 100%;
+        margin: 10px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
